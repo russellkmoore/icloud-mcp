@@ -1,5 +1,5 @@
 // Worker configuration (D-04: jsonc, so the rationale can live inline).
-// Every key below exists in wrangler@4.122.0's config-schema.json.
+// Every key below exists in wrangler@4.147.0's config-schema.json.
 //
 // ── TEMPLATE ──────────────────────────────────────────────────────────────
 // The tracked copy of this file is `wrangler.jsonc.example`, and the values
@@ -23,9 +23,10 @@
   "main": "src/index.ts",
 
   // Pin rationale (D-15): `wrangler` is exact-pinned in package.json and
-  // matched to `@cloudflare/vitest-pool-workers`, which itself depends on
-  // wrangler at an exact version — any other top-level pin installs two
-  // copies and tests then run against a different runtime than deploys.
+  // matched to the patched runtime forced through package.json's overrides.
+  // `@cloudflare/vitest-pool-workers` itself pins an older Wrangler release;
+  // the override keeps tests and deploy on one audited runtime instead of
+  // installing two versions with different workerd builds.
   // workers-sdk#9238 broke raw TCP sockets (`cloudflare:sockets`) entirely in
   // wrangler 4.15.0. Treat every wrangler bump as a SOCKET-affecting change,
   // not a build-affecting one: a green build proves nothing about a socket.

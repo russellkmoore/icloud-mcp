@@ -29,17 +29,27 @@
     "ical.js": "2.2.1",
     "postal-mime": "3.0.0",
     "tsdav": "2.3.4",
-    "unpdf": "1.8.0",
-    "zod": "4.4.3"
+    "unpdf": "1.8.1",
+    "zod": "4.6.5"
   },
   "devDependencies": {
-    "@cloudflare/vitest-pool-workers": "0.21.2",
-    "@cloudflare/workers-types": "5.20260812.1",
-    "@vitest/runner": "4.1.10",
-    "@vitest/snapshot": "4.1.10",
+    "@cloudflare/vitest-pool-workers": "0.22.0",
+    "@cloudflare/workers-types": "5.20261004.1",
+    "@vitest/runner": "4.1.11",
+    "@vitest/snapshot": "4.1.11",
     "husky": "9.1.7",
     "typescript": "5.9.3",
-    "vitest": "4.1.10",
-    "wrangler": "4.122.0"
+    "vitest": "4.1.11",
+    "wrangler": "4.147.0"
+  },
+  "overrides": {
+    "fast-uri": "3.1.8",
+    "hono": "4.13.13",
+    "ip-address": "10.7.3",
+    "miniflare": "5.20261001.0-alpha",
+    "qs": "6.16.0",
+    "sharp": "0.35.4",
+    "undici": "7.29.1",
+    "wrangler": "4.147.0"
   }
 }

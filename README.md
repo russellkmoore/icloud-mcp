@@ -652,9 +652,9 @@ Cloudflare Workers, Durable Objects (SQLite), Vectorize and Workers AI ·
 TypeScript 5.9 · MCP SDK v2 (`@modelcontextprotocol/server` 2.0.0) · `agents`
 0.20.1 (`createMcpHandler`) · `@cloudflare/workers-oauth-provider` 0.10.3 ·
 `tsdav` 2.3.4 (CalDAV/CardDAV) · `ical.js` 2.2.1 (iCalendar **and** vCard) ·
-`postal-mime` 3.0.0 (MIME) · `unpdf` 1.8.0 (PDF text) · `aws4fetch` 1.0.20 (R2
-presign) · `zod` 4.4.3 (schemas) · Wrangler 4.122.0 · Vitest 4.1.10 with
-`@cloudflare/vitest-pool-workers` 0.21.2.
+`postal-mime` 3.0.0 (MIME) · `unpdf` 1.8.1 (PDF text) · `aws4fetch` 1.0.20 (R2
+presign) · `zod` 4.6.5 (schemas) · Wrangler 4.147.0 · Vitest 4.1.11 with
+`@cloudflare/vitest-pool-workers` 0.22.0.
 
 ---
 
