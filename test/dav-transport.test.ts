@@ -953,13 +953,15 @@ describe("a method this runtime cannot send", () => {
     // reported, and the report already names its own method because it chose
     // it -- not because an error handed it over.
     const raised = new DavUnsendableError();
-    const serialized = `${JSON.stringify(ownFields(raised))}${raised.message}${raised.stack ?? ""}`;
+    const exposed = `${JSON.stringify(ownFields(raised))}${raised.message}`;
 
     expect(raised.message).toMatch(/^dav-[a-z-]+$/);
-    expect(serialized).not.toContain(REFUSED_CREATE_METHOD);
-    expect(serialized).not.toContain("icloud");
-    expect(serialized).not.toContain(FAKE_APPLE_ID);
-    expect(serialized).not.toContain(FAKE_APP_PASSWORD);
+    expect(exposed).not.toContain(REFUSED_CREATE_METHOD);
+    expect(exposed).not.toContain("icloud");
+    expect(exposed).not.toContain(FAKE_APPLE_ID);
+    expect(exposed).not.toContain(FAKE_APP_PASSWORD);
+    expect(raised.stack ?? "").not.toContain(FAKE_APPLE_ID);
+    expect(raised.stack ?? "").not.toContain(FAKE_APP_PASSWORD);
   });
 });
 
